@@ -34,3 +34,9 @@ jobs:
         env:
           PULUMI_ACCESS_TOKEN: ${{secrets.PULUMI_ACCESS_TOKEN}}
         run: pulumi login
+
+      - name: pulumi stack select
+        run: pulumi stack select TimamBinSaifTahmid/Infra/dev
+      
+      - name: pulumi up
+        run: pulumi up -yes
